@@ -10,6 +10,14 @@ public class Product {
     private final int quantityInStock;
     private final BigDecimal unitPrice;
 
+    public Product() {
+        this(0, "", null, 0, BigDecimal.ZERO);
+    }
+
+    public Product(long productId, String name, LocalDate dateSupplied) {
+        this(productId, name, dateSupplied, 0, BigDecimal.ZERO);
+    }
+
     public Product(long productId, String name, LocalDate dateSupplied,
                    int quantityInStock, BigDecimal unitPrice) {
         this.productId = productId;
